@@ -1,0 +1,10 @@
+# Ignore these files
+
+api-endpoint.txt
+towns.txt
+textbelt-api-key.txt
+cvs-output.json
+cookie-data.txt
+phone-number.txt
+header-user-agent.txt
+header-referer.txt
