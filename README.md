@@ -1,11 +1,11 @@
 # CVS Vaccine Text Alert (New York)
 
 This tool sends a text message to the number in `./phone-number.txt` using the
-[Textbelt][txtblt] API with a CVS location that has available appointments from
-the list of locations in `towns.txt`.
+[Textbelt][txtblt] API with a NY CVS location that has available appointments
+from the list of locations in `towns.txt`.
 
 This script allows you to repeatably refresh the CVS COVID-19 vaccine page to
-see what locations have vaccines available. This doesn't not book a vaccine
+see what locations have vaccines available. This does not book a vaccine
 appointment. Instead, it sends a text message with the sign-up link and which
 location had available bookings. I built this for my senior parents who could
 not possible refresh the CVS website consistently or correctly. It's recommended
@@ -35,15 +35,15 @@ tab when the state is picked on the web page.
 ### towns.txt
 
 This is a space-delimited list of the towns in NY that you would like to set an
-alert for. eg. `WOODSTOCK ALBANY OSWEGO`
+alert for. eg. `WOODSTOCK ALBANY OSWEGO`.
 
 ### phone-number.txt
 
-This is a numerical phone number without any other characters. eg. `5551234567`
+This is a numerical phone number without any other characters. eg. `5551234567`.
 
 ### textbelt-api-key.txt
 
-This is an API key provided by [Textbelt][txtblt]
+This is an API key provided by [Textbelt][txtblt].
 
 ### api-endpoint.txt
 
@@ -52,15 +52,15 @@ given state.
 
 ### header-user-agent.txt
 
-The `User-Agent` header used by your browser for the initial request.
+The `User-Agent:` header used by your browser for the initial request.
 
 ### header-referer.txt
 
-The `Referer` header used by your browser for the initial request.
+The `Referer:` header used by your browser for the initial request.
 
 ### cookie-data.txt
 
-The `Cookie` header used by your browser for the initial request.
+The `Cookie:` header used by your browser for the initial request.
 
 [txtblt]: https://textbelt.com "Send and receive SMS with a clean, simple API"
 
@@ -70,4 +70,5 @@ It's possible to support other states without much modification to the main
 logic to the script. The API endpoint should contain a two-letter abbreviation
 for the state you are looking for info on. By modifying that value to another
 two-letter abbreviation for a given state, the results should change to that
-given state.
+given state. You need to modify the `jq` statement to use the new two-letter
+abbreviation for the API call.
