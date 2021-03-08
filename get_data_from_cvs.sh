@@ -32,7 +32,7 @@ do
   areAnyAvailable=$(
     jq --arg t ${t} \
       -r \
-      '.responsePayloadData.data.NY[] | select(.city == $t) | {"status": .status} | .status == "Available"' \
+      '.responsePayloadData.data.NY[] | select(.city == $t) | .status == "Available"' \
       -- ${currentDirectory}/cvs-output.json
   )
 
