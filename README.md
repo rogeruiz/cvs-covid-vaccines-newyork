@@ -64,6 +64,13 @@ The `Cookie:` header used by your browser for the initial request.
 
 [txtblt]: https://textbelt.com "Send and receive SMS with a clean, simple API"
 
+## Example config files
+
+If you're more of a visual learner, here's an example of [the necessary config
+files in a gist][gist] you can download and populate yourself.
+
+[gist]: https://gist.github.com/rogeruiz/1ce5b4e76b8079870b85ce0571611f7d
+
 ## Other states
 
 It's possible to support other states without much modification to the main
