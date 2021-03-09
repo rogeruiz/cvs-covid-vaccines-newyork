@@ -43,6 +43,7 @@ do
       --data-urlencode phone=${phoneNumber} \
       --data-urlencode message="There are vaccines available at ${t} CVS! $(date) ${linkToWebsite}" \
       -d key=${api_key}
+    echo
   else
     echo "No vaccines available at ${t} CVS. $(date)"
   fi
