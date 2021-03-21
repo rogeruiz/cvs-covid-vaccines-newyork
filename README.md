@@ -34,8 +34,13 @@ tab when the state is picked on the web page.
 
 ### towns.txt
 
-This is a space-delimited list of the towns in NY that you would like to set an
-alert for. eg. `WOODSTOCK ALBANY OSWEGO`.
+This is a newline-delimited list of the towns in NY that you would like to set an
+alert for. eg.
+
+`WOODSTOCK
+ALBANY
+New Rochelle
+OSWEGO`.
 
 ### phone-number.txt
 
