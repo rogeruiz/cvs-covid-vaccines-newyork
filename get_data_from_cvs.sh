@@ -26,11 +26,11 @@ curl \
   -H "$(cat ${currentDirectory}/cookie-data.txt)" \
   -H 'TE: Trailers' > ${currentDirectory}/cvs-output.json
 
-for t in ${towns}
+cat ${currentDirectory}/towns.txt | while read t
 do
 
   areAnyAvailable=$(
-    jq --arg t ${t} \
+    jq --arg t "${t}" \
       -r \
       '.responsePayloadData.data.NY[] | select(.city == $t) | .status == "Available"' \
       -- ${currentDirectory}/cvs-output.json
@@ -38,14 +38,14 @@ do
 
   if [[ "${areAnyAvailable}" == 'true' ]]
   then
-    echo "Yes vaccines available at ${t} CVS! $(date)"
+    echo "Yes vaccines available at "${t}" CVS! $(date)"
     curl -X POST https://textbelt.com/text \
       --data-urlencode phone=${phoneNumber} \
-      --data-urlencode message="There are vaccines available at ${t} CVS! $(date) ${linkToWebsite}" \
+      --data-urlencode message="There are vaccines available at "${t}" CVS! $(date) ${linkToWebsite}" \
       -d key=${api_key}
     echo
   else
-    echo "No vaccines available at ${t} CVS. $(date)"
+    echo "No vaccines available at "${t}" CVS. $(date)"
   fi
 
 done
