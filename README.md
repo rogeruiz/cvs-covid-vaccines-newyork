@@ -39,7 +39,7 @@ alert for. eg.
 
 `WOODSTOCK
 ALBANY
-New Rochelle
+NEW ROCHELLE
 OSWEGO`.
 
 ### phone-number.txt
