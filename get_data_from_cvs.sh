@@ -6,8 +6,6 @@ areAnyAvailable="false"
 
 currentDirectory=$(dirname "${0}")
 
-towns=$(cat ${currentDirectory}/towns.txt)
-
 phoneNumber=$(cat ${currentDirectory}/phone-number.txt)
 api_key=$(cat ${currentDirectory}/textbelt-api-key.txt)
 linkToWebsite="https://www.cvs.com/immunizations/covid-19-vaccine?icid=cvs-home-hero1-link2-coronavirus-vaccine#acc_link_content_section_box_251541438_boxpar_accordion_910919113_2"
