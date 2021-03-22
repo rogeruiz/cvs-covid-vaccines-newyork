@@ -39,7 +39,7 @@ do
     echo "Yes vaccines available at "${t}" CVS! $(date)"
     curl -X POST https://textbelt.com/text \
       --data-urlencode phone=${phoneNumber} \
-      --data-urlencode message="There are vaccines available at "${t}" CVS! $(date) ${linkToWebsite}" \
+      --data-urlencode message="There are vaccines available at "${t}" CVS! $(date)" \
       -d key=${api_key}
     echo
   else
