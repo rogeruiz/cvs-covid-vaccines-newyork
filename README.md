@@ -37,10 +37,12 @@ tab when the state is picked on the web page.
 This is a newline-delimited list of the towns in NY that you would like to set an
 alert for. eg.
 
-`WOODSTOCK
+```
+WOODSTOCK
 ALBANY
 NEW ROCHELLE
-OSWEGO`.
+OSWEGO
+```
 
 ### phone-number.txt
 
